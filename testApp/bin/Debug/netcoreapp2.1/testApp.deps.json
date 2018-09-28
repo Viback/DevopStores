@@ -25,6 +25,7 @@
       "testApp/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
+          "Microsoft.Extensions.Configuration.CommandLine": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.4",
           "Npgsql": "4.0.3",
