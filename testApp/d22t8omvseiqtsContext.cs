@@ -15,6 +15,8 @@ namespace testApp
         {
         }
 
+        public virtual DbSet<Inventory> Inventory { get; set; }
+        public virtual DbSet<Stores> Stores { get; set; }
         public virtual DbSet<Testproducts> Testproducts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,6 +30,50 @@ namespace testApp
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Inventory>(entity =>
+            {
+                entity.ToTable("inventory");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.ProdId).HasColumnName("prod_id");
+
+                entity.Property(e => e.Qty).HasColumnName("qty");
+
+                entity.Property(e => e.StoreId).HasColumnName("store_id");
+            });
+
+            modelBuilder.Entity<Stores>(entity =>
+            {
+                entity.HasKey(e => e.StoreId);
+
+                entity.ToTable("stores");
+
+                entity.Property(e => e.StoreId)
+                    .HasColumnName("store_id")
+                    .HasDefaultValueSql("nextval('stores_prod_id_seq'::regclass)");
+
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasColumnName("address")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.PhoneNo)
+                    .IsRequired()
+                    .HasColumnName("phone_no")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.StoreName)
+                    .IsRequired()
+                    .HasColumnName("store_name")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.ZipCode)
+                    .IsRequired()
+                    .HasColumnName("zip_code")
+                    .HasMaxLength(50);
+            });
+
             modelBuilder.Entity<Testproducts>(entity =>
             {
                 entity.HasKey(e => e.ProdId);
@@ -46,6 +92,8 @@ namespace testApp
                     .HasColumnName("prod_name")
                     .HasMaxLength(50);
             });
+
+            modelBuilder.HasSequence<int>("stores_prod_id_seq");
         }
     }
 }
