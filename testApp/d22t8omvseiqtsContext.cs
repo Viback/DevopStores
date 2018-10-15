@@ -23,8 +23,8 @@ namespace testApp
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseNpgsql("Host=ec2-174-129-35-61.compute-1.amazonaws.com;Port=5432;Database=d22t8omvseiqts;Username=ptzhigowuibpbo;Password=c56bbb7562dae77969cdf1eb039cc999dc718e54b3b41c70832bea28ab3c3deb; SslMode=Require; trust server certificate=true");
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable("DATABASE_URL"));
             }
         }
 
