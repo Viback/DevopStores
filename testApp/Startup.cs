@@ -25,7 +25,8 @@ namespace testApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Environment.GetEnvironmentVariable("DATABASE_URL"); 
+            var cString = Environment.GetEnvironmentVariable("DATABASE_URL"); 
+            var connectionString = cString + "SslMode = Require; trust server certificate = true";
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddEntityFrameworkNpgsql().AddDbContext<d22t8omvseiqtsContext>(options => options.UseNpgsql(connectionString));
         }
