@@ -24,11 +24,12 @@ namespace testApp
             if (!optionsBuilder.IsConfigured)
             {
                
-                var cstring = Environment.GetEnvironmentVariable("DATABASE_URL"); 
-                string [] conn =cstring.Split(":","/","@");
-                //            var connectionString = "Server = ec2-174-129-35-61.compute-1.amazonaws.com; Port = 5432; Database = d22t8omvseiqts; Username = ptzhigowuibpbo; Password = c56bbb7562dae77969cdf1eb039cc999dc718e54b3b41c70832bea28ab3c3deb; SslMode = Require; trust server certificate = true"; 
+                 string cstring = Environment.GetEnvironmentVariable("DATABASE_URL"); 
+                string [] conn = cstring.Split(":","/","@");
+                //var connectionString = "Server = ec2-174-129-35-61.compute-1.amazonaws.com; Port = 5432; Database = d22t8omvseiqts; Username = ptzhigowuibpbo; Password = c56bbb7562dae77969cdf1eb039cc999dc718e54b3b41c70832bea28ab3c3deb; SslMode = Require; trust server certificate = true"; 
 
-                var connstr = "Server = "+ conn[3] +";"+ "Port = " + conn[4] + ";" + "Database = "+ conn[1] + ";" + "Username = " + conn[5] + ";" + "Password ="+ conn[2] + ";" + "SslMode = Require; trust server certificate = true";
+                var connectionString = "Server = " + conn[3] + ";"+ "Port = " + conn[4] + ";" + "Database = " + conn[1] + ";" + "Username = " + conn[5] + ";" + "Password = "+ conn[2] + ";" + "SslMode = Require; trust server certificate = true";
+            
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseNpgsql(connstr);
             }
