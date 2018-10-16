@@ -125,7 +125,7 @@ GET api/stores_with_product/1111
 
 [3,4]
 
-Or
+Or 
 
 {
 "id":1,
