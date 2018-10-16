@@ -28,7 +28,8 @@ namespace testApp.Controllers
             }
 
             var inventory = _context.Inventory.Where(e => e.ProdId.Equals(p_id)).ToList();
-            var stores = inventory.Select(e => e.StoreId).ToList();
+            //new { i.category_id, i.category_name }
+            var stores = inventory.Select(e =>new {e.StoreId, e.Qty}).ToList();
             
             if (stores == null)
             {
