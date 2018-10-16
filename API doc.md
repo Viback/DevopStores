@@ -29,10 +29,8 @@ GET api/stores
 "phoneNo":"+3580000456"
 }]
 
-
  GET /api/stores/1
- 
- 
+  
  {
 "storeId":1,
 "storeName":"Helsinki",
@@ -40,7 +38,9 @@ GET api/stores
 "zipCode":"00100",
 "phoneNo":"+358123456"
 }
+
  GET api/inventories
+ 
  [{
 "id":1,
 "storeId":3,
