@@ -1,4 +1,5 @@
-GET api/stores
+<!doctype json>
+//GET api/stores
 
 [{
 "storeId":1,
@@ -31,7 +32,7 @@ GET api/stores
 
 
 
-GET /api/stores/1
+//GET /api/stores/1
 
 {
 "storeId":1,
@@ -42,7 +43,7 @@ GET /api/stores/1
 }
 
 
-GET api/inventories
+//GET api/inventories
 
 [{
 "id":1,
@@ -89,7 +90,7 @@ GET api/inventories
 
 
 
-GET /api/inventories/3
+//GET /api/inventories/3
 
 [{
 "id":1,
@@ -111,7 +112,7 @@ GET /api/inventories/3
 }]
 
 
-GET /api/inventories/3/123
+//GET /api/inventories/3/123
 
 [{
 "id":4,
@@ -121,7 +122,7 @@ GET /api/inventories/3/123
 }]
 
 
-GET api/stores_with_product/1111
+//GET api/stores_with_product/1111
 
 [3,4]
 
