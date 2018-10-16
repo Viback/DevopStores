@@ -1,4 +1,5 @@
 GET api/stores
+
  [{
 "storeId":1,
 "storeName":"Helsinki",
