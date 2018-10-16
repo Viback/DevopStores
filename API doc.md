@@ -27,7 +27,11 @@ GET api/stores
 "zipCode":"90100",
 "phoneNo":"+3580000456"
 }]
+
+
  GET /api/stores/1
+ 
+ 
  {
 "storeId":1,
 "storeName":"Helsinki",
@@ -78,7 +82,11 @@ GET api/stores
 "prodId":222,
 "qty":1
 }]
+
+
  GET /api/inventories/3
+ 
+ 
  [{
 "id":1,
 "storeId":3,
@@ -97,14 +105,22 @@ GET api/stores
 "prodId":222,
 "qty":1
 }]
+
+
  GET /api/inventories/3/123
+ 
+ 
  [{
 "id":4,
 "storeId":3,
 "prodId":123,
 "qty":11
 }]
+
+
  GET api/stores_with_product/1111
+ 
+ 
  [3,4]
  Or
  {
