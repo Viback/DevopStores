@@ -122,13 +122,11 @@ GET api/stores
  GET api/stores_with_product/1111
  
  
- [3,4]
- Or
+ [{
+ "storeId":3,
+ "qty":2
+ },
  {
-"id":1,
-"qty":2
-},
-{
-"id":4,
-"qty":7
-}
+ "storeId":4,
+ "qty":7
+ }]
