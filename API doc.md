@@ -1,7 +1,5 @@
-<!doctype json>
-//GET api/stores
-
-[{
+GET api/stores
+ [{
 "storeId":1,
 "storeName":"Helsinki",
 "address":"Mannerheimintie 8",
@@ -29,23 +27,16 @@
 "zipCode":"90100",
 "phoneNo":"+3580000456"
 }]
-
-
-
-//GET /api/stores/1
-
-{
+ GET /api/stores/1
+ {
 "storeId":1,
 "storeName":"Helsinki",
 "address":"Mannerheimintie 8",
 "zipCode":"00100",
 "phoneNo":"+358123456"
 }
-
-
-//GET api/inventories
-
-[{
+ GET api/inventories
+ [{
 "id":1,
 "storeId":3,
 "prodId":1111,
@@ -87,12 +78,8 @@
 "prodId":222,
 "qty":1
 }]
-
-
-
-//GET /api/inventories/3
-
-[{
+ GET /api/inventories/3
+ [{
 "id":1,
 "storeId":3,
 "prodId":1111,
@@ -110,25 +97,17 @@
 "prodId":222,
 "qty":1
 }]
-
-
-//GET /api/inventories/3/123
-
-[{
+ GET /api/inventories/3/123
+ [{
 "id":4,
 "storeId":3,
 "prodId":123,
 "qty":11
 }]
-
-
-//GET api/stores_with_product/1111
-
-[3,4]
-
-Or 
-
-{
+ GET api/stores_with_product/1111
+ [3,4]
+ Or
+ {
 "id":1,
 "qty":2
 },
@@ -136,7 +115,3 @@ Or
 "id":4,
 "qty":7
 }
-
-
-
-
