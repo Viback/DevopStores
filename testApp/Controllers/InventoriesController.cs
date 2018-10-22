@@ -22,6 +22,12 @@ namespace testApp.Controllers
 
         // GET: api/Inventories
         [HttpGet]
+        public IEnumerable<Inventory> GetInventory()
+        {
+            return _context.Inventory;
+        }
+
+         [HttpGet]
         public IActionResult GetInventory([FromRoute])
         {
              if (!ModelState.IsValid)
