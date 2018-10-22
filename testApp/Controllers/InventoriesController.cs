@@ -29,6 +29,7 @@ namespace testApp.Controllers
                 return BadRequest(ModelState);
             }
             var inventory = _context.Inventory.Select(e =>new {e.StoreId, e.ProdId, e.Qty}).ToList();
+            
             if (inventory == null)
             {
                 return NotFound();
