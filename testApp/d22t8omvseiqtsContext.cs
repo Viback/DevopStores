@@ -42,7 +42,7 @@ namespace testApp
             {
                 entity.ToTable("inventory");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                //entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.ProdId).HasColumnName("prod_id");
 

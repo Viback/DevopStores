@@ -24,8 +24,7 @@ namespace testApp.Controllers
         [HttpGet]
         public IEnumerable<Inventory> GetInventory()
         {
-            var no_id = _context.Inventory.Select(e =>new {e.StoreId, e.ProdId, e.Qty}).ToList(); 
-            return no_id;
+            return _context.Inventory;
         }
 
         // GET: api/Inventories/store_id
