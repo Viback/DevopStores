@@ -26,23 +26,7 @@ namespace testApp.Controllers
         {
             return _context.Inventory;
         }
-
-         [HttpGet]
-        public IActionResult GetInventory([FromRoute])
-        {
-             if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var inventory = _context.Inventory.Select(e =>new {e.StoreId, e.ProdId, e.Qty}).ToList();
-            
-            if (inventory == null)
-            {
-                return NotFound();
-            }
-            return Ok(inventory);
-        }
-
+        
         // GET: api/Inventories/store_id
         [HttpGet("{id}")]
         public IActionResult GetInventory([FromRoute] int id)
