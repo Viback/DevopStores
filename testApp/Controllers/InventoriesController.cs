@@ -147,6 +147,6 @@ namespace testApp.Controllers
         private bool InventoryExists(int id)
         {
             return _context.Inventory.Any(e => e.Id == id);
-        }
-    }*/
+        }*/
+    }
 }
