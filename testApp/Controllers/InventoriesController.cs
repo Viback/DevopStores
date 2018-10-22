@@ -22,7 +22,7 @@ namespace testApp.Controllers
 
         // GET: api/Inventories
         [HttpGet]
-        public IEnumerable<Inventory> GetInventory()
+        public IActionResult GetInventory([FromRoute])
         {
             var inventory = _context.Inventory.Select(e =>new {e.StoreId, e.ProdId, e.Qty}).ToList();
             return inventory;
