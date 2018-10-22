@@ -26,7 +26,7 @@ namespace testApp.Controllers
         {
             return _context.Inventory;
         }
-        
+
         // GET: api/Inventories/store_id
         [HttpGet("{id}")]
         public IActionResult GetInventory([FromRoute] int id)
@@ -74,7 +74,7 @@ namespace testApp.Controllers
 
 
         // PUT: api/Inventories/5
-       /*  [HttpPut("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutInventory([FromRoute] int id, [FromBody] Inventory inventory)
         {
             if (!ModelState.IsValid)
@@ -147,6 +147,6 @@ namespace testApp.Controllers
         private bool InventoryExists(int id)
         {
             return _context.Inventory.Any(e => e.Id == id);
-        }*/
+        }
     }
 }
