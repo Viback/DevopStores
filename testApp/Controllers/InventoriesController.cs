@@ -24,7 +24,11 @@ namespace testApp.Controllers
         [HttpGet]
         public IEnumerable<Inventory> GetInventory()
         {
-            return _context.Inventory;
+            {
+        var inventory = _context.Inventory;
+        var inventory_no_id = inventory.Select(e =>new {e.StoreId, e.prodId, e.Qty}).ToList(); 
+            return inventory_no_id;
+        }
         }
 
         // GET: api/Inventories/store_id
@@ -37,13 +41,14 @@ namespace testApp.Controllers
             }
 
             var inventory = _context.Inventory.Where(e => e.StoreId.Equals(id)).ToList();
-
+            var inventory_no_id = inventory.Select(e =>new {e.StoreId, e.prodId, e.Qty}).ToList(); 
+            
             if (inventory == null)
             {
                 return NotFound();
             }
 
-            return Ok(inventory);
+            return Ok(inventory_no_id);
         }
         // GET: api/Inventories/store_id/prod_id
         [HttpGet("{id}/{p_id}")]
@@ -56,13 +61,14 @@ namespace testApp.Controllers
 
             var inventory = _context.Inventory.Where(e => e.StoreId.Equals(id)).ToList();
             var prod = inventory.Where(e => e.ProdId.Equals(p_id)).ToList();
+            var inventory_no_id = prod.Select(e =>new {e.StoreId, e.prodId, e.Qty}).ToList();
 
             if (prod == null)
             {
                 return NotFound();
             }
 
-            return Ok(prod);
+            return Ok(inventory_no_id);
         }
 
 
