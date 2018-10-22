@@ -74,7 +74,7 @@ namespace testApp.Controllers
 
 
         // PUT: api/Inventories/5
-        [HttpPut("{id}")]
+       /*  [HttpPut("{id}")]
         public async Task<IActionResult> PutInventory([FromRoute] int id, [FromBody] Inventory inventory)
         {
             if (!ModelState.IsValid)
@@ -148,5 +148,5 @@ namespace testApp.Controllers
         {
             return _context.Inventory.Any(e => e.Id == id);
         }
-    }
+    }*/
 }
