@@ -12,3 +12,17 @@ C:\Users\Win_7\source\repos\testApp\testApp\obj\Debug\netcoreapp2.1\testApp.Asse
 C:\Users\Win_7\source\repos\testApp\testApp\obj\Debug\netcoreapp2.1\testApp.RazorTargetAssemblyInfo.cache
 C:\Users\Win_7\source\repos\testApp\testApp\obj\Debug\netcoreapp2.1\testApp.dll
 C:\Users\Win_7\source\repos\testApp\testApp\obj\Debug\netcoreapp2.1\testApp.pdb
+C:\Users\Win_7\Desktop\DevOps\testApp\bin\Debug\netcoreapp2.1\testApp.deps.json
+C:\Users\Win_7\Desktop\DevOps\testApp\bin\Debug\netcoreapp2.1\testApp.runtimeconfig.json
+C:\Users\Win_7\Desktop\DevOps\testApp\bin\Debug\netcoreapp2.1\testApp.runtimeconfig.dev.json
+C:\Users\Win_7\Desktop\DevOps\testApp\bin\Debug\netcoreapp2.1\testApp.dll
+C:\Users\Win_7\Desktop\DevOps\testApp\bin\Debug\netcoreapp2.1\testApp.pdb
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.csprojAssemblyReference.cache
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.csproj.CoreCompileInputs.cache
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.RazorAssemblyInfo.cache
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.RazorAssemblyInfo.cs
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.AssemblyInfoInputs.cache
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.AssemblyInfo.cs
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.RazorTargetAssemblyInfo.cache
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.dll
+C:\Users\Win_7\Desktop\DevOps\testApp\obj\Debug\netcoreapp2.1\testApp.pdb

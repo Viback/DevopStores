@@ -27,8 +27,8 @@ namespace testApp
              string cstring = Environment.GetEnvironmentVariable("DATABASE_URL"); 
                 string [] conn = cstring.Split(delimiterChars);
                 //postgres://zqjjctnlwmlbhi:6f9c3f7cc013ed68bf34c263b65638d0ab97ebce95145f69ca2c1175518c7998@ec2-54-75-239-237.eu-west-1.compute.amazonaws.com:5432/djgnafl590i04
-                //var connectionString = "Server = ec2-174-129-35-61.compute-1.amazonaws.com; Port = 5432; Database = d22t8omvseiqts; Username = ptzhigowuibpbo; Password = c56bbb7562dae77969cdf1eb039cc999dc718e54b3b41c70832bea28ab3c3deb; SslMode = Require; trust server certificate = true"; 
-                
+                //var connectionString = "Server = ec2-54-75-239-237.eu-west-1.compute.amazonaws.com; Port = 5432; Database = djgnafl590i04; Username = zqjjctnlwmlbhi; Password = 6f9c3f7cc013ed68bf34c263b65638d0ab97ebce95145f69ca2c1175518c799; SslMode = Require; trust server certificate = true"; 
+
                 var connectionString = "Server = " + conn[5] + ";"+ "Port = " + conn[6] + ";" + "Database = " + conn[7] + ";" + "Username = " + conn[3] + ";" + "Password = "+ conn[4] + ";" + "SslMode = Require; trust server certificate = true";
             
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.

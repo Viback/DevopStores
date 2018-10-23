@@ -24,11 +24,32 @@ namespace testApp.Controllers
         [HttpGet]
         public IEnumerable<Inventory> GetInventory()
         {
-            return _context.Inventory;
+            var inventory = _context.Inventory;
+            //product.Entity<Product>().Ignore(e => e.image);
+
+            return inventory;
+        }
+
+        [HttpGet("{stores}")]
+        public IActionResult GetInventory([FromRoute] string stores)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var inventory = _context.Inventory.Select(e => new { e.StoreId, e.ProdId, e.Qty }).ToList();
+            //var no_id = inventory.Select(e => new { e.StoreId, e.Qty, e.ProdId }).ToList();
+            if (inventory == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(inventory);
         }
 
         // GET: api/Inventories/store_id
-        [HttpGet("{id}")]
+        [HttpGet("stores/{id}")]
         public IActionResult GetInventory([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -37,7 +58,7 @@ namespace testApp.Controllers
             }
 
             var inventory = _context.Inventory.Where(e => e.StoreId.Equals(id)).ToList();
-
+            //var no_id = inventory.Select(e => new { e.StoreId, e.Qty, e.ProdId }).ToList();
             if (inventory == null)
             {
                 return NotFound();
@@ -46,7 +67,7 @@ namespace testApp.Controllers
             return Ok(inventory);
         }
         // GET: api/Inventories/store_id/prod_id
-        [HttpGet("{id}/{p_id}")]
+        [HttpGet("stores/{id}/{p_id}")]
         public IActionResult GetInventory([FromRoute] int id ,int p_id)
         {
             if (!ModelState.IsValid)
@@ -56,6 +77,7 @@ namespace testApp.Controllers
 
             var inventory = _context.Inventory.Where(e => e.StoreId.Equals(id)).ToList();
             var prod = inventory.Where(e => e.ProdId.Equals(p_id)).ToList();
+            //var no_id = prod.Select(e => new { e.StoreId, e.Qty, e.ProdId }).ToList();
 
             if (prod == null)
             {
