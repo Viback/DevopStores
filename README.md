@@ -3,7 +3,9 @@
 Dokumentation för alla stores APIer. Svaren är i JSON format.
 <h3>GET</h3>
 <h4>Inventories API</h4><br>
-https://devopstoresapp.herokuapp.com/api/inventories/stores
+
+/api/inventories/stores
+visar produkterna och databaserna som finns i databasen
 
 ```
 {
@@ -12,20 +14,22 @@ https://devopstoresapp.herokuapp.com/api/inventories/stores
 "qty":2
 },
 ```
-/api/iventories/stores/1
+/api/iventories/stores/1 
+visar vad som finns i butik(1:an)
+om det inte finns butiken man fösöker slippa till får man 404
 ```
 {
-(database id) : "id":4, 
+(database id)"id":4, 
 "storeId":1,
 "prodId":321,
 "qty":22
 }
-
-
+```
 
 <br><h4>Stores API</h4><br>
 https://devopstoresapp.herokuapp.com/api/stores
 <br>Default: Listar ut alla butikers information.
+om butik id:n inte finns kommer de 404
 
 
 ```
