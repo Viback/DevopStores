@@ -2,6 +2,7 @@
 <h3>Stores</h3>
 Dokumentation för alla stores APIer. Svaren är i JSON format.
 <h3>GET</h3>
+<h3>Om produkten / butiken existerar inte returnar det en 404 </h3> 
 <h4>Inventories API</h4><br>
 https://devopstoresapp.herokuapp.com/api/inventories/stores
 
@@ -18,6 +19,7 @@ https://devopstoresapp.herokuapp.com/api/inventories/stores
 https://devopstoresapp.herokuapp.com/api/stores
 <br>Default: Listar ut alla butikers information.
 
+
 ```
 {
 storeId":1,
@@ -27,3 +29,4 @@ storeId":1,
 "phoneNo":"+358123456"
 },
 ```
+<br><
