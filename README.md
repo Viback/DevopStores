@@ -43,3 +43,4 @@ storeId":1,
 ```
 ![kappa](https://createwebsite.pro/wp-content/uploads/2018/07/404-error-page-basic.jpg
 )
+![error_404_http_code](https://user-images.githubusercontent.com/43543460/47654299-260f1c00-db93-11e8-9cdd-5147b7bf961f.jpg)
