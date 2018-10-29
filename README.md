@@ -42,5 +42,6 @@ storeId":1,
 },
 ```
 <h3>HTTP 404 exempel:</h3>
+
 ![error](https://user-images.githubusercontent.com/43543460/47654471-8ef69400-db93-11e8-88b2-ed8e25ccd06f.PNG)
 
