@@ -16,7 +16,7 @@ visar produkterna och databaserna som finns i databasen
 ```
 /api/iventories/stores/1 
 visar vad som finns i butik(1:an)
-om det inte finns butiken man fösöker slippa till får man 404
+<br>om det inte finns butiken man fösöker slippa till får man 404
 ```
 {
 (database id)"id":4, 
@@ -29,7 +29,7 @@ om det inte finns butiken man fösöker slippa till får man 404
 <br><h4>Stores API</h4><br>
 https://devopstoresapp.herokuapp.com/api/stores
 <br>Default: Listar ut alla butikers information.
-om butik id:n inte finns kommer de 404
+<br>om butik id:n inte finns kommer de 404
 
 
 ```
